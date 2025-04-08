@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>title</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+    header {
+      background-color: lightblue;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #ddd;
+      padding: 10px;
+    }
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    .content-container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+    .main {
+      flex: 2;
+      padding: 20px;
+      background: #f4f4f4;
+      margin-right: 20px;
+    }
+    .aside {
+      flex: 1;
+      padding: 20px;
+      background: #e2e2e2;
+      margin-right: 20px;
+    }
+    .functions {
+      flex: 1;
+      padding: 20px;
+      background: #fafafa;
+    }
+    .functions h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .functions-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    .function-box {
+      flex: 1;
+      min-width: 100px;
+      margin: 10px;
+      padding: 20px;
+      background-color: lightblue;
+      text-align: center;
+      border-radius: 4px;
+    }
+    footer {
+      background-color: lightblue;
+      text-align: center;
+      padding: 10px;
+    }
+    @media (max-width: 768px) {
+      .content-container {
+        flex-direction: column;
+      }
+      .main, .aside, .functions {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+      .functions-container {
+        flex-direction: row;
+      }
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <ul>
+    <li><a href="#">Strona główna</a></li>
+    <li><a href="#">O nas</a></li>
+    <li><a href="#">Kontakt</a></li>
+  </ul>
+</nav>
+<div class="content-container">
+  <main class="main">
+    <h2>Sekcja główna</h2>
+    <p>Treść główna – przykładowy tekst opisujący zawartość strony.</p>
+  </main>
+  <section class="functions">
+    <h2>Funkcje</h2>
+    <div class="functions-container">
+      <div class="function-box">
+        <h3>Funkcja 1</h3>
+        <p>Krótki opis funkcji 1.</p>
+      </div>
+      <div class="function-box">
+        <h3>Funkcja 2</h3>
+        <p>Krótki opis funkcji 2.</p>
+      </div>
+      <div class="function-box">
+        <h3>Funkcja 3</h3>
+        <p>Krótki opis funkcji 3.</p>
+      </div>
+    </div>
+  </section>
+  <aside class="aside">
+    <h3>Dodatkowe informacje</h3>
+    <p>Treść panelu bocznego – informacje dodatkowe, menu boczne itp.</p>
+  </aside>
+</div>
+<footer>
+  <p>&copy; 2025 Moja Strona</p>
+</footer>
+</body>
+</html>
